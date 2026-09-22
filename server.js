@@ -4,8 +4,7 @@ const express = require('express');
 const helmet = require('helmet');
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
-const authRoutes = require('./routes/auth');
-
+const authRoutes = require('./routes/auth.js');
 const { MONGODB_URI, JWT_SECRET, GOOGLE_CLIENT_ID, PORT = 5000 } = process.env;
 if (!MONGODB_URI || !JWT_SECRET) {
   console.error('Missing MONGODB_URI or JWT_SECRET. Copy server/.env.example to server/.env and fill it in.');
